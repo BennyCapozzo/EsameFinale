@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="bg-secondary py-3">{{ element.activity }}</h1>
+  <div class="d-flex border gap-3">
+    <div class="d-flex">
+      <div class="img">
+          <img src="../../../assets/{{element.type}}.png" alt="immagine tipo">
+      </div>
+    </div>
+    <div>
+        <p>Partecipanti: {{ element.participants}}</p>
+        <p>Price: {{ element.price }}</p>
+        <p>Accessibilita: {{ element.accessibility }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Lista delle attività</h1>
+    <div *ngFor="let elem of localList">
+        <div class="d-flex gap-3 border">
+            <p> {{ elem.activity }}</p>
+            <p> {{ elem.type }}</p>
+            <p> {{ elem.price }}</p>
+            <button class="btn btn-primary" routerLink="/detail/{{elem.key}}">Dettagli</button>
+        </div>
+    </div>
+    <button class="btn btn-secondary my-3" routerLink="/home">Richiedi un'attività</button>
+</div>
+
+<ng-container *ngIf="localList.length == 0">
+    <h1 class="class-center">NESSUN ELEMENTO PRESENTE IN LISTA</h1>
+</ng-container>
