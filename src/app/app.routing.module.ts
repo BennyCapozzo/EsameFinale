@@ -5,9 +5,11 @@ import { DettaglioComponent } from "./components/dettaglio/dettaglio.component";
 import { ListComponent } from "./components/list/list.component";
 
 const routes: Routes = [
+    { path: '', redirectTo:'home', pathMatch: 'full' },
     { path: 'list', component: ListComponent},
     { path: 'home', component: ActivityComponent},
-    { path: 'detail/:id', component: DettaglioComponent}
+    { path: 'detail/:id', component: DettaglioComponent},
+    { path: '**', redirectTo: 'home'}
 ]
 
 @NgModule({
